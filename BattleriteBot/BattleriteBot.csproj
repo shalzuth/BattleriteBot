@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1803F63-D667-45EC-8B35-4C9E8763ACF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BattleriteBot</RootNamespace>
+    <AssemblyName>BattleriteBot</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MergedShared">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Battlerite\Battlerite_Data\Managed\MergedShared.dll</HintPath>
+    </Reference>
+    <Reference Include="MergedUnity">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Battlerite\Battlerite_Data\Managed\MergedUnity.dll</HintPath>
+    </Reference>
+    <Reference Include="StunConsoleTool">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Battlerite\Battlerite_Data\Managed\StunConsoleTool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityContent">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Battlerite\Battlerite_Data\Managed\UnityContent.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Battlerite\Battlerite_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Battlerite\Battlerite_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addons\Champions\AbilityData.cs" />
+    <Compile Include="Addons\Champions\Bakko.cs" />
+    <Compile Include="Addons\Champions\Champion.cs" />
+    <Compile Include="Addons\DisplayEnergy.cs" />
+    <Compile Include="Addons\Orbwalker.cs" />
+    <Compile Include="Addons\SceneDebugger.cs" />
+    <Compile Include="Addons\ShowEnemyMouse.cs" />
+    <Compile Include="Addons\SkinHax.cs" />
+    <Compile Include="Addons\Timers.cs" />
+    <Compile Include="Addons\Zoom.cs" />
+    <Compile Include="API.cs" />
+    <Compile Include="DeObfuscator.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="InputManager.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Reflection.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
